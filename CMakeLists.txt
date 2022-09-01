@@ -12,9 +12,15 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Catch2)
 
+Include(FetchContent)
+FetchContent_Declare(
+        nlohmann_json
+        GIT_REPOSITORY https://github.com/nlohmann/json.git
+        GIT_TAG v3.11.2
+)
+FetchContent_MakeAvailable(nlohmann_json)
+
 add_subdirectory(src)
 
 enable_testing()
 add_subdirectory(test)
-
-add_executable(ais2203_exercise2 main.cpp)

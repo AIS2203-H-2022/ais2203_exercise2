@@ -1,0 +1,14 @@
+{
+  "imu": {
+    "is_valid": true,
+    "roll": 0.14,
+    "pitch": 0.013,
+    "yaw": -5.68
+  },
+  "accelerometer": {
+    "is_valid": true,
+    "x": 0,
+    "y": -0.01,
+    "z": -0.23
+  }
+}
