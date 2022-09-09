@@ -13,14 +13,14 @@ TEST_CASE("Test parse_json JSON file") {
     const auto data = parse_json(jsonFile);
 
     CHECK(data.imu.is_valid);
-    CHECK(data.imu.roll == Catch::Detail::Approx(0.14));
-    CHECK(data.imu.pitch == Catch::Detail::Approx(0.013));
-    CHECK(data.imu.yaw == Catch::Detail::Approx(-5.68));
+    CHECK(data.imu.roll == Approx(0.14));
+    CHECK(data.imu.pitch == Approx(0.013));
+    CHECK(data.imu.yaw == Approx(-5.68));
 
     CHECK(data.accelerometer.is_valid);
-    CHECK(data.accelerometer.x == Catch::Detail::Approx(0));
-    CHECK(data.accelerometer.y == Catch::Detail::Approx(-0.01));
-    CHECK(data.accelerometer.z == Catch::Detail::Approx(-0.23));
+    CHECK(data.accelerometer.x == Approx(0));
+    CHECK(data.accelerometer.y == Approx(-0.01));
+    CHECK(data.accelerometer.z == Approx(-0.23));
 }
 
 TEST_CASE("Test parse_json JSON string") {
@@ -44,12 +44,12 @@ TEST_CASE("Test parse_json JSON string") {
     const auto data = parse_json(json);
 
     CHECK(data.imu.is_valid);
-    CHECK(data.imu.roll == Catch::Detail::Approx(0.12));
-    CHECK(data.imu.pitch == Catch::Detail::Approx(-0.024));
-    CHECK(data.imu.yaw == Catch::Detail::Approx(-4.32));
+    CHECK(data.imu.roll == Approx(0.12));
+    CHECK(data.imu.pitch == Approx(-0.024));
+    CHECK(data.imu.yaw == Approx(-4.32));
 
     CHECK(data.accelerometer.is_valid);
-    CHECK(data.accelerometer.x == Catch::Detail::Approx(-0.001));
-    CHECK(data.accelerometer.y == Catch::Detail::Approx(-0.11));
-    CHECK(data.accelerometer.z == Catch::Detail::Approx(0.33));
+    CHECK(data.accelerometer.x == Approx(-0.001));
+    CHECK(data.accelerometer.y == Approx(-0.11));
+    CHECK(data.accelerometer.z == Approx(0.33));
 }
